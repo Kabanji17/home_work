@@ -1,18 +1,23 @@
+import re
+
 from .masks import get_mask_card_number, get_mask_account
 
 
 def mask_account_card(account_card: str) -> str:
     """Функция, которая маскирует номер карты или счета"""
+    name_card = ""
     masked_number = ""
+    masked_card_number = ""
     for symbol in account_card:
         if symbol.isalpha():
+            name_card += symbol
+        elif symbol.isdigit():
             masked_number += symbol
-    for symbol in account_card:
-        if symbol.isdigit() and len(symbol) == 16:
-            masked_number += get_mask_card_number(symbol)
-        elif symbol.isdigit() and len(symbol) == 18:
-            masked_number += get_mask_account(symbol)
-    return masked_number
+    if len(masked_number) == 16:
+        masked_card_number = name_card + " " + get_mask_card_number(masked_number)
+    elif len(masked_number) == 18:
+        masked_card_number = name_card + " " + get_mask_account(masked_number)
+    return masked_card_number
 
 
 def get_data(data: str) -> str:
