@@ -11,11 +11,13 @@ def mask_account_card(account_card: str) -> str:
     for symbol in account_card:
         if symbol.isalpha():
             name_card += symbol
+        elif symbol.isalpha() and bool(re.search("[а-яА-я]", symbol)):
+            name_card += symbol
         elif symbol.isdigit():
             masked_number += symbol
     if len(masked_number) == 16:
         masked_card_number = name_card + " " + get_mask_card_number(masked_number)
-    elif len(masked_number) == 18:
+    elif len(masked_number) == 20:
         masked_card_number = name_card + " " + get_mask_account(masked_number)
     return masked_card_number
 
