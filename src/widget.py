@@ -3,14 +3,15 @@ import re
 from .masks import get_mask_card_number, get_mask_account
 
 
-def mask_account_card(account_card: str) -> str:
+def mask_account_card(account_card: int | str) -> str:
     """Функция, которая маскирует номер карты или счета"""
+    account_card_split = account_card.split()
     name_card = ""
     masked_number = ""
     masked_card_number = ""
-    for symbol in account_card:
+    for symbol in account_card_split:
         if symbol.isalpha():
-            name_card += symbol
+            name_card += symbol + " "
         elif symbol.isalpha() and bool(re.search("[а-яА-я]", symbol)):
             name_card += symbol
         elif symbol.isdigit():
