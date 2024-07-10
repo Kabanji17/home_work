@@ -1,4 +1,4 @@
-from typing import Any
+from typing import List, Dict, Optional, Union
 
 origin_list = [
     {"id": 41428829, "state": "EXECUTED", "date": "2019-07-03T18:35:29.512364"},
@@ -8,7 +8,9 @@ origin_list = [
 ]
 
 
-def filter_by_state(origin_list: list[dict[str, Any]], state: str = "EXECUTED") -> list[dict[str, Any]]:
+def filter_by_state(
+    origin_list: List[Dict[str, Optional[Union[int, str]]]], state: str = "EXECUTED"
+) -> List[Dict[str, Optional[Union[int, str]]]]:
     """Функция, сортирующая список по введенному ключу"""
     filtered_list = []
     for data in origin_list:
@@ -17,7 +19,9 @@ def filter_by_state(origin_list: list[dict[str, Any]], state: str = "EXECUTED") 
     return filtered_list
 
 
-def sort_by_date(origin_list: list[dict[str, Any]], reverse_list: bool = True) -> list[dict[str, Any]]:
+def sort_by_date(
+    origin_list: List[Dict[str, Optional[Union[int, str]]]], reverse_list: bool = True
+) -> List[Dict[str, Optional[Union[int, str]]]]:
     """Функция, сортирующия по дате в порядке возрастания или убывания"""
     sorted_list = sorted(origin_list, key=lambda d: d.get("date"), reverse=reverse_list)
     return sorted_list
