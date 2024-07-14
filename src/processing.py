@@ -1,4 +1,4 @@
-from typing import List, Dict, Optional, Union
+from typing import Dict, List, Optional, Union
 
 origin_list = [
     {"id": 41428829, "state": "EXECUTED", "date": "2019-07-03T18:35:29.512364"},
