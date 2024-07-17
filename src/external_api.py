@@ -1,8 +1,8 @@
 import os
-import requests
-from dotenv import load_dotenv
 from typing import Any
 
+import requests
+from dotenv import load_dotenv
 
 load_dotenv()
 
@@ -21,8 +21,6 @@ def get_sum_conversion_currency(transaction: Any) -> Any:
             response = requests.get(url, headers=headers)
             data = response.json()
             return round(data["result"], 2)
-
     except (KeyError, TypeError, ValueError, requests.RequestException) as e:
         print(f"Error: {e}")
         return 0.0
-
