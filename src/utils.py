@@ -1,6 +1,5 @@
-import logging
 import json
-
+import logging
 
 logger = logging.getLogger("utils")
 file_handler = logging.FileHandler("../logs/utils.log", encoding="utf-8")
@@ -26,5 +25,5 @@ def get_transaction_info(filename: str) -> list[dict]:
     return data_info
 
 
-if __name__ == '__main__':
-    print(get_transaction_info(filename='../data/operations.json'))
+if __name__ == "__main__":
+    print(get_transaction_info(filename="../data/operations.json"))
