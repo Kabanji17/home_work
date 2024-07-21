@@ -23,3 +23,7 @@ def get_transaction_info_from_json(filename: str) -> list[dict]:
         logger.error(f"Ошибка: {ex}")
         return []
     return data_info
+
+
+if __name__ == "__main__":
+    print(get_transaction_info_from_json("../data/operations.json"))
