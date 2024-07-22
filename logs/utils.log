@@ -1,0 +1,8 @@
+2024-07-19 13:44:15,793 utils.py INFO: Файл успешно открыт
+2024-07-19 13:47:08,791 utils.py INFO: Файл успешно открыт
+2024-07-20 18:01:01,051 utils.py ERROR: Ошибка: [Errno 2] No such file or directory: '../data/kakayato_hren.json'
+2024-07-20 18:01:07,969 utils.py INFO: Файл успешно открыт
+2024-07-20 18:01:07,978 utils.py ERROR: Ошибка: [Errno 2] No such file or directory: '../data/kakayato_hren.json'
+2024-07-20 18:01:07,985 utils.py ERROR: Ошибка: [Errno 2] No such file or directory: ''
+2024-07-20 18:01:16,498 utils.py INFO: Файл успешно открыт
+2024-07-21 15:51:22,040 utils.py INFO: Файл успешно открыт
