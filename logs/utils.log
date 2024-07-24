@@ -12,3 +12,29 @@
 2024-07-23 21:56:33,798 utils.py INFO: Файл успешно открыт
 2024-07-23 21:56:33,809 utils.py ERROR: Ошибка: [Errno 2] No such file or directory: '../data/kakayato_hren.json'
 2024-07-23 21:56:33,814 utils.py ERROR: Ошибка: [Errno 2] No such file or directory: ''
+2024-07-24 18:43:33,900 utils.py INFO: Файл успешно открыт
+2024-07-24 18:52:30,812 utils.py INFO: Файл успешно открыт
+2024-07-24 18:52:47,358 utils.py INFO: Файл успешно открыт
+2024-07-24 19:06:58,438 utils.py INFO: Файл успешно открыт
+2024-07-24 19:07:28,537 utils.py INFO: Файл успешно открыт
+2024-07-24 19:08:07,285 utils.py INFO: Файл успешно открыт
+2024-07-24 19:09:13,440 utils.py INFO: Файл успешно открыт
+2024-07-24 19:10:51,462 utils.py INFO: Файл успешно открыт
+2024-07-24 19:18:51,428 utils.py INFO: Файл успешно открыт
+2024-07-24 19:19:18,368 utils.py INFO: Файл успешно открыт
+2024-07-24 19:20:56,187 utils.py INFO: Файл успешно открыт
+2024-07-24 19:20:56,425 utils.py INFO: Файл успешно открыт
+2024-07-24 19:20:56,433 utils.py ERROR: Ошибка: [Errno 2] No such file or directory: '../data/kakayato_hren.json'
+2024-07-24 19:20:56,440 utils.py ERROR: Ошибка: [Errno 2] No such file or directory: ''
+2024-07-24 20:20:09,364 utils.py ERROR: Ошибка: [Errno 2] No such file or directory: '../data/operations.json'
+2024-07-24 21:28:41,733 utils.py ERROR: Ошибка: [Errno 2] No such file or directory: '../data/operations.json'
+2024-07-24 21:31:43,655 utils.py ERROR: Ошибка: [Errno 2] No such file or directory: '../data/operations.json'
+2024-07-24 21:34:10,042 utils.py ERROR: Ошибка: [Errno 2] No such file or directory: '../data/operations.json'
+2024-07-24 21:34:13,871 utils.py INFO: Файл успешно открыт
+2024-07-24 21:35:25,692 utils.py ERROR: Ошибка: [Errno 2] No such file or directory: '../data/operations.json'
+2024-07-24 21:35:29,249 utils.py INFO: Файл успешно открыт
+2024-07-24 21:37:35,650 utils.py ERROR: Ошибка: [Errno 2] No such file or directory: '../data/operations.json'
+2024-07-24 21:37:38,538 utils.py INFO: Файл успешно открыт
+2024-07-24 21:38:36,443 utils.py ERROR: Ошибка: [Errno 2] No such file or directory: '../data/operations.json'
+2024-07-24 21:39:23,618 utils.py ERROR: Ошибка: [Errno 2] No such file or directory: '../data/operations.json'
+2024-07-24 21:42:04,279 utils.py ERROR: Ошибка: [Errno 2] No such file or directory: '../data/operations.json'

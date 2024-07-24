@@ -1,7 +1,7 @@
 import unittest
 from collections import Counter
 
-from src.searching import search_transactions, filter_transactions
+from src.searching import filter_transactions, search_transactions
 
 example_transactions = [
     {"id": 1, "description": "Перевод организации", "amount": 1000},
@@ -11,6 +11,7 @@ example_transactions = [
     {"id": 5, "description": "Открытие вклада", "amount": 500},
     {"id": 6, "description": "Перевод со счета на счет", "amount": 600},
 ]
+
 
 class TestTransactionFunctions(unittest.TestCase):
 
@@ -54,6 +55,7 @@ class TestTransactionFunctions(unittest.TestCase):
         result = filter_transactions(example_transactions, ["Не существующая категория"])
         expected = {}
         self.assertEqual(result, expected)
+
 
 if __name__ == "__main__":
     unittest.main()

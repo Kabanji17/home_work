@@ -1,9 +1,10 @@
 import re
 from collections import Counter
+
 from src.utils import get_transaction_info_from_json
 
-
 list_transactions = get_transaction_info_from_json("../data/operations.json")
+
 
 def search_transactions(data_transactions: list[dict], searching_string: str) -> list[dict]:
     """Функция, которая будет принимать список словарей с данными о банковских операциях и строку поиска,
@@ -24,7 +25,6 @@ def filter_transactions(data_trasactions: list[dict], list_of_categories: list) 
         if "description" in transaction and transaction["description"] in list_of_categories:
             searching_list.append(transaction["description"])
     return dict(Counter(searching_list))
-
 
 
 if __name__ == "__main__":
