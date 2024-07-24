@@ -17,7 +17,7 @@ def transaction_descriptions(transactions_list: list[dict]) -> Generator[str, No
         yield transaction["description"]
 
 
-def card_number_generator(start: int, stop: int) -> str:
+def card_number_generator(start: int, stop: int) -> Generator[str, None, None]:
     """Генератор, который выдает номера банковских карт в формате XXXX XXXX XXXX XXXX"""
     for number in range(start, stop + 1):
         number_str = f"{number:016}"

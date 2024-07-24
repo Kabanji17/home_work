@@ -52,17 +52,25 @@ pip install -r requirements.txt
 ### Покрытие тестами 
 
 проверка:
+
+Сначала заходим в папку ```tests``` и из нее включаем тесты:
+```
+cd tests
+```
 ```
 pytest --cov
 ```
 ```
+Name                         Stmts   Miss  Cover
+------------------------------------------------
 src\__init__.py                  0      0   100%
 src\decorators.py               23      1    96%
 src\external_api.py             20      3    85%
 src\generators.py               15      1    93%
-src\masks.py                     4      0   100%
+src\masks.py                    23      5    78%
 src\processing.py               11      0   100%
-src\utils.py                    10      1    90%
+src\readers.py                  17     13    24%
+src\utils.py                    22      3    86%
 src\widget.py                   21      1    95%
 tests\__init__.py                0      0   100%
 tests\test_decorators.py        43      0   100%
@@ -70,10 +78,11 @@ tests\test_external_api.py      13      0   100%
 tests\test_generators.py        20      0   100%
 tests\test_masks.py              8      0   100%
 tests\test_processing.py        10      0   100%
+tests\test_readers.py            9      0   100%
 tests\test_utils.py             17      0   100%
 tests\test_widget.py            11      0   100%
 ------------------------------------------------
-TOTAL                          226      7    97%
+TOTAL                          283     27    90%
 ```
 ## Документация:
 

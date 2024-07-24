@@ -9,7 +9,7 @@ origin_list = [
 
 
 def filter_by_state(
-    origin_list: List[Dict[str, Optional[Union[int, str]]]], state: str = "EXECUTED"
+        origin_list: List[Dict[str, Optional[Union[int, str]]]], state: str = "EXECUTED"
 ) -> List[Dict[str, Optional[Union[int, str]]]]:
     """Функция, сортирующая список по введенному ключу"""
     filtered_list = []
@@ -20,8 +20,8 @@ def filter_by_state(
 
 
 def sort_by_date(
-    origin_list: List[Dict[str, Optional[Union[int, str]]]], reverse_list: bool = True
+        origin_list: List[Dict[str, Optional[Union[int, str]]]], reverse: bool = True
 ) -> List[Dict[str, Optional[Union[int, str]]]]:
     """Функция, сортирующия по дате в порядке возрастания или убывания"""
-    sorted_list = sorted(origin_list, key=lambda d: d.get("date"), reverse=reverse_list)
+    sorted_list = sorted(origin_list, key=lambda d: d.get("date"), reverse=reverse)
     return sorted_list
