@@ -24,7 +24,9 @@ pip install -r requirements.txt
 6. В модуле ```utils``` функция, которая принимает на вход путь до JSON-файла и возвращает список словарей с данными о финансовых транзакциях.
 7. В модуле ```external_api``` функция, которая принимает на вход транзакцию и возвращает сумму транзакции (amount) в рублях, тип данных — float. Если транзакция была в USD или EUR, происходит обращение к внешнему API для получения текущего курса валют и конвертации суммы операции в рубли.
 8. В модули добавлено логирование работы функций. Логи записываются в файлы папки ```logs```
-9. В модуле ```readers``` содержатся функции для преобразования CSV и Excel файлов в списки словарей. Загрузите в директорию data. Укажите полный путь до файла при вызове функции и получите в выводе список словарей. 
+9. В модуле ```readers``` содержатся функции для преобразования CSV и Excel файлов в списки словарей. Загрузите в директорию data. Укажите полный путь до файла при вызове функции и получите в выводе список словарей.
+10. В модуле ```searching``` содержатся функции: первая - ищет по определенному слову нужные транзакции, вторая - выводит сколько и каких категорий есть во всех ваших транзакциях. 
+11. в модуле ```main``` содержится функцию, которая отвечает за основную логику проекта и связывает функциональности между собой.
 
 Формат данных для операций с транзакциями:
 ```
@@ -47,33 +49,55 @@ pip install -r requirements.txt
 
 ## Тесты:
 1. В программе используются фикстуры и параметризация, mock и patch
-2. Программа покрыта тестами на 97%
+2. Программа покрыта тестами на 91%
 
 ### Покрытие тестами 
 
 проверка:
+
+Сначала заходим в папку ```tests``` и из нее включаем тесты:
+```
+cd tests
+```
 ```
 pytest --cov
 ```
 ```
-src\__init__.py                  0      0   100%
-src\decorators.py               23      1    96%
-src\external_api.py             20      3    85%
-src\generators.py               15      1    93%
-src\masks.py                     4      0   100%
-src\processing.py               11      0   100%
-src\utils.py                    10      1    90%
-src\widget.py                   21      1    95%
-tests\__init__.py                0      0   100%
-tests\test_decorators.py        43      0   100%
-tests\test_external_api.py      13      0   100%
-tests\test_generators.py        20      0   100%
-tests\test_masks.py              8      0   100%
-tests\test_processing.py        10      0   100%
-tests\test_utils.py             17      0   100%
-tests\test_widget.py            11      0   100%
-------------------------------------------------
-TOTAL                          226      7    97%
+Name                                                  Stmts   Miss  Cover
+-------------------------------------------------------------------------
+C:\Users\ksuha\my_prj\home_work\src\__init__.py           0      0   100%
+C:\Users\ksuha\my_prj\home_work\src\decorators.py        23      1    96%
+C:\Users\ksuha\my_prj\home_work\src\external_api.py      20      3    85%
+C:\Users\ksuha\my_prj\home_work\src\generators.py        15      1    93%
+C:\Users\ksuha\my_prj\home_work\src\masks.py             23      5    78%
+C:\Users\ksuha\my_prj\home_work\src\processing.py        11      0   100%
+C:\Users\ksuha\my_prj\home_work\src\readers.py           17     13    24%
+C:\Users\ksuha\my_prj\home_work\src\searching.py         20      3    85%       
+C:\Users\ksuha\my_prj\home_work\src\utils.py             22      3    86%       
+C:\Users\ksuha\my_prj\home_work\src\widget.py            21      1    95%       
+__init__.py                             
+                                                          0      0   100%       
+test_decorators.py                      
+                                                         43      0   100%       
+test_external_api.py                    
+                                                         13      0   100%       
+test_generators.py                      
+                                                         20      0   100%       
+test_masks.py                           
+                                                          8      0   100%       
+test_processing.py                      
+                                                         10      0   100%       
+test_readers.py                         
+                                                          9      0   100%       
+test_searching.py                       
+                                                         28      1    96%       
+test_utils.py                           
+                                                         17      0   100%       
+test_widget.py                          
+                                                         11      0   100%       
+-------------------------------------------------------------------------       
+TOTAL                                   
+                                                        331     31    91%     
 ```
 ## Документация:
 
