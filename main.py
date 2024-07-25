@@ -79,7 +79,7 @@ def main() -> str:
         currency_choice = input("Выводить только рублевые транзакции? Да/Нет\n").lower()
     else:
         if currency_choice == "да":
-            filtered_transactions = filter_by_currency(filtered_transactions, "RUB")
+            filtered_transactions = list(filter_by_currency(filtered_transactions, "RUB"))
         elif currency_choice == "нет":
             filtered_transactions = filtered_transactions
 
