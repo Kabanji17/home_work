@@ -1,9 +1,9 @@
 import re
 
-from .masks import get_mask_card_number, get_mask_account
+from .masks import get_mask_account, get_mask_card_number
 
 
-def mask_account_card(account_card: int | str) -> str:
+def mask_account_card(account_card: str) -> str:
     """Функция, которая маскирует номер карты или счета"""
     account_card_split = account_card.split()
     name_card = ""
